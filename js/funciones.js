@@ -13,4 +13,3 @@ console.log(calculoPotencia(10));
 console.log(calculoPotencia(20));
 console.log(calculoPotencia(45));
 
-
