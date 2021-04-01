@@ -1,54 +1,32 @@
-function saludar(params) {
-    console.log("Hola Andrés")   
-}
 
-saludar ();
+// Promedio entre 4 numeros
 
-function caluladora(pNumero1, pNumero2, pOperation) {
-    let resultado = 0;
-    switch (pOperation) {
-        case "+":
-            resultado = pNumero1 + pNumero2;
-            break;
-        case "-":
-            resultado = pNumero1 - pNumero2;
-            break;
-        default:
-            break;        
+var numero1
+var numero2
+var numero3
+var numero4
 
-    }  
-    
-    return resultado;
-}
+let mensaje = prompt ("Calcule el promedio entre 4 numeros")
 
-alert(caluladora(20,200, "-"));
+numero1 = parseInt(prompt("Ingrese el primer numero"));
+numero2 = parseInt(prompt("Ingrese el segundo numero"));
+numero3 = parseInt(prompt("Ingrese el tercer numero"));
+numero4 = parseInt(prompt("Ingrese el cuarto numero"));
 
-let numero1 = parseInt(prompt("Ingrese numero 1"));
-let numero2 = parseInt(prompt("Ingrese numero 2"));
-let operacion = prompt("Ingrese operacion + o -");
-alert(caluladora(numero1,numero2, operacion));
+let promedio = prompt(numero1 + numero2 + numero3 + numero4) / 4;
 
-// Repito 20 veces saludar
-for (let index = 0; index < 20; index++) {
-    saludar();  
-}
+// Calculo iva - 
 
-const suma = (x,y) => x + y ;
-const resta = (x,y) => x - y ;
-const iva = x => x * 0.21;
+var precio = numero1 + numero2 + numero3 + numero4;
+var iva = precio *21/100;
+var precioIva = precio+iva;
 
-// Version function
-function iva2 ( x ){
-    return x * 0.21;
-}
+alert ("Precio con iva $" + precioIva);
 
-alert(suma(2,3));
+// Precio con descuento
 
-let precioProducto = 5000;
-let precioDescuento = 500;
+var descuento = 300;
+var resta = precioIva - descuento;
+ 
+alert ("Precio con descuento " + resta)
 
-let precioMasIva = suma(precioProducto, iva(precioProducto));
-
-let precioFinal = resta(precioMasIva, precioDescuento);
-
-alert(precioFinal); 
